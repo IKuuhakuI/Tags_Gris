@@ -1,3 +1,25 @@
 create database db_processo;
 
 use db_processo;
+
+create table Candidatos{
+	CPF int not null primary key,
+	Nome varchar(30) not null	
+};
+
+create table Palestrantes{
+	CPF int not null primary key,
+	Nome varchar(30) not null
+};
+
+create table Visitantes{
+	CPF int not null primary key,
+	Nome varchar(30) not null
+};
+
+create table Tags{
+
+};
+
+create table Palestras{
+};
