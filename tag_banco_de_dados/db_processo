@@ -23,3 +23,6 @@ create table Tags{
 
 create table Palestras{
 };
+
+create table Ouvintes{
+};
