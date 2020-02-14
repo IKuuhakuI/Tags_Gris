@@ -4,7 +4,10 @@ use db_processo;
 
 create table Candidatos{
 	CPF int not null primary key,
-	Nome varchar(30) not null	
+	Nome varchar(30) not null,
+	Curso varchar(40) not null,
+	Contato_1 varchar(40) not null,
+	Contato_2 varchar(40)	
 };
 
 create table Palestrantes{
