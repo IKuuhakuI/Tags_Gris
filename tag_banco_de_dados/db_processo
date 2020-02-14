@@ -32,11 +32,30 @@ CREATE TABLE palestras(
     	REFERENCES palestrantes(CPF_palestrante)
 );
 
-INSERT INTO palestras (assunto, data, CPF_palestrante) VALUES ("Ética", 2020-02-03, "123.456.789-00")
+INSERT INTO palestras (assunto, data, CPF_palestrante) VALUES ("Ética", "2020-02-03", "123.456.789-00");
 
-CREATE TABLE Tags(
-	
+CREATE TABLE tags(
+	ID_tag INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	ID_palestra INT NOT NULL,
+	data_entrega DATETIME,
+	descricao varchar(255) NOT NULL,
+	CONSTRAINT FK_ID_palestra FOREIGN KEY (ID_palestra)
+    	REFERENCES palestras(ID_palestra)
 );
+
+INSERT INTO tags (ID_palestra, data_entrega, descricao) VALUES (1, "2020-02-29 18:00:00", "Elaborar um banco de dados para o processo seletivo");
+
+CREATE TABLE boletim(
+	ID_boletim INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	CPF_candidato VARCHAR(14) NOT NULL,
+	ID_tag INT NOT NULL,
+	nota INT NOT NULL,
+	atraso char(1),
+	CONSTRAINT FK_ID_tag FOREIGN KEY (ID_tag)
+    	REFERENCES tags(ID_tag)
+);
+
+INSERT INTO boletim (CPF_candidato,ID_tag, nota, atraso) VALUES ("321.654.987-00", 1, 8, "N");
 
 CREATE TABLE Ouvintes(
 );
