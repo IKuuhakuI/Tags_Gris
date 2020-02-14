@@ -57,5 +57,12 @@ CREATE TABLE boletim(
 
 INSERT INTO boletim (CPF_candidato,ID_tag, nota, atraso) VALUES ("321.654.987-00", 1, 8, "N");
 
-CREATE TABLE Ouvintes(
+CREATE TABLE ouvintes(
+	ID_ouvinte INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	nome varchar(30) NOT NULL,
+	CPF_ouvinte VARCHAR(14) NOT NULL, 
+	ID_palestra int,
+	FOREIGN KEY(ID_palestra) REFERENCES palestras(ID_palestra)
 );
+
+INSERT INTO ouvintes (CPF_ouvinte,ID_palestra) VALUES ("111.111.111-11", 1);
