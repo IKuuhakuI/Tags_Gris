@@ -19,11 +19,6 @@ create table Palestrantes(
 	contato_2 varchar(40)
 );
 
-create table Visitantes(
-	CPF int not null primary key,
-	nome varchar(30) not null
-);
-
 create table Tags(
 
 );
