@@ -2,7 +2,7 @@ create database db_processo;
 
 use db_processo;
 
-create table Candidatos(
+CREATE TABLE candidatos(
 	CPF_candidato int primary key not null,
 	nome varchar(30) not null,
 	curso varchar(40) not null,
@@ -10,8 +10,8 @@ create table Candidatos(
 	contato_2 varchar(40)	
 );
 
-create table Palestrantes(
-	CPF_palestrante int not null primary key,
+CREATE TABLE palestrantes(
+	CPF_palestrante varchar(14) not null primary key,
 	nome varchar(30) not null,
 	formacao varchar(40) not null,
 	instituicao varchar(40),
@@ -19,12 +19,22 @@ create table Palestrantes(
 	contato_2 varchar(40)
 );
 
-create table Tags(
+INSERT INTO palestrantes (CPF_palestrante, nome, formacao, instituicao, contato_1, contato_2) VALUES ("123.456.789-00", "Ronaldo", "Engenharia Eletrônica", "UFRJ", "email@exemplo.com", "912345678");
+
+CREATE TABLE palestras(
+	ID_palestra INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	assunto VARCHAR(40) NOT NULL,
+	data DATE NOT NULL,
+	CPF_palestrante VARCHAR(14) NOT NULL,
+	CONSTRAINT FK_CPF_palestrante FOREIGN KEY (CPF_palestrante)
+    	REFERENCES palestrantes(CPF_palestrante)
+);
+
+INSERT INTO palestras (assunto, data, CPF_palestrante) VALUES ("Ética", 2020-02-03, "123.456.789-00")
+
+CREATE TABLE Tags(
 
 );
 
-create table Palestras(
-);
-
-create table Ouvintes(
+CREATE TABLE Ouvintes(
 );
