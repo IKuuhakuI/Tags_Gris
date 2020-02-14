@@ -2,34 +2,34 @@ create database db_processo;
 
 use db_processo;
 
-create table Candidatos{
-	CPF_Candidato int not null primary key,
-	Nome varchar(30) not null,
-	Curso varchar(40) not null,
-	Contato_1 varchar(40) not null,
-	Contato_2 varchar(40)	
-};
+create table Candidatos(
+	CPF_candidato int primary key not null,
+	nome varchar(30) not null,
+	curso varchar(40) not null,
+	contato_1 varchar(40) not null,
+	contato_2 varchar(40)	
+);
 
-create table Palestrantes{
-	CPF_Palestrante int not null primary key,
-	Nome varchar(30) not null,
-	Formacao varchar(40) not null,
-	Instituicao varchar(40),
-	Contato_1 varchar(40) not null,
-	Contato_2 varchar(40)
-};
+create table Palestrantes(
+	CPF_palestrante int not null primary key,
+	nome varchar(30) not null,
+	formacao varchar(40) not null,
+	instituicao varchar(40),
+	contato_1 varchar(40) not null,
+	contato_2 varchar(40)
+);
 
-create table Visitantes{
+create table Visitantes(
 	CPF int not null primary key,
-	Nome varchar(30) not null
-};
+	nome varchar(30) not null
+);
 
-create table Tags{
+create table Tags(
 
-};
+);
 
-create table Palestras{
-};
+create table Palestras(
+);
 
-create table Ouvintes{
-};
+create table Ouvintes(
+);
