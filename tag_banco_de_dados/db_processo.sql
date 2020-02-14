@@ -41,9 +41,11 @@ CREATE TABLE boletim(
 	CPF_candidato VARCHAR(14) NOT NULL,
 	ID_tag INT NOT NULL,
 	nota INT NOT NULL,
-	atraso char(1),
+	atraso CHAR(1),
 	CONSTRAINT FK_ID_tag FOREIGN KEY (ID_tag)
-    	REFERENCES tags(ID_tag)
+    	REFERENCES tags(ID_tag),
+	CONSTRAINT FK_CPF_candidato FOREIGN KEY (CPF_candidato)
+    	REFERENCES candidatos(CPF_candidato)
 );
 
 CREATE TABLE ouvintes(
