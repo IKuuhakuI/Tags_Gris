@@ -3,12 +3,14 @@ create database db_processo;
 use db_processo;
 
 CREATE TABLE candidatos(
-	CPF_candidato int primary key not null,
+	CPF_candidato varchar(14) primary key not null,
 	nome varchar(30) not null,
 	curso varchar(40) not null,
 	contato_1 varchar(40) not null,
 	contato_2 varchar(40)	
 );
+
+INSERT INTO candidatos (CPF_candidato, nome, curso, contato_1, contato_2) VALUES ("321.654.987-00", "Mike", "Engenharia Eletrônica", "outro@exemplo.com", "987654321");
 
 CREATE TABLE palestrantes(
 	CPF_palestrante varchar(14) not null primary key,
@@ -33,7 +35,7 @@ CREATE TABLE palestras(
 INSERT INTO palestras (assunto, data, CPF_palestrante) VALUES ("Ética", 2020-02-03, "123.456.789-00")
 
 CREATE TABLE Tags(
-
+	
 );
 
 CREATE TABLE Ouvintes(
