@@ -52,6 +52,15 @@ CREATE TABLE ouvintes(
 	ID_ouvinte INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 	nome varchar(30) NOT NULL,
 	CPF_ouvinte VARCHAR(14) NOT NULL, 
-	ID_palestra int,
+	ID_palestra int NOT NULL,
 	FOREIGN KEY(ID_palestra) REFERENCES palestras(ID_palestra)
+);
+
+CREATE TABLE presenca(
+	ID_presenca INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	ID_palestra INT NOT NULL,
+	presente CHAR(1) NOT NULL,
+	CPF_candidato VARCHAR(14) NOT NULL,
+	FOREIGN KEY(ID_palestra) REFERENCES palestras(ID_palestra),
+	FOREIGN KEY(CPF_candidato) REFERENCES candidatos(CPF_candidato)
 );
