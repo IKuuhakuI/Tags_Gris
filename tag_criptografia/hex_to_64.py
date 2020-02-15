@@ -10,17 +10,31 @@ print(convert_list[43])
 
 hex_num = input()
 
-hex_num = int(hex_num, 16)
+hex_list = [0] * len(hex_num)
 
-hex_str = list(hex(hex_num))
+for idx in range(len(hex_num)):
+	try:
+		hex_alg = int(hex_num[idx],16)
+		hex_alg.pop(0)
+		hex_alg.pop(0)
 
-hex_str.pop(0)
-hex_str.pop(0)
+	except:
+		hex_alg = hex_num[idx]
+	
+	hex_list[idx] = hex_alg
 
-bin_list = [0] * len(hex_str)
+print(hex_list)
 
-for idx in range(len(hex_str)):
-	this_hex = int(hex_str[idx], 16)
+tam_hex_num = len(hex_list)
+
+bin_list = [0] * tam_hex_num
+
+for idx in range(tam_hex_num):
+	try:
+		this_hex = int(hex_list[idx], 16)
+
+	except:
+		this_hex = int(hex_list[idx])
 
 	print(bin(this_hex))
 
