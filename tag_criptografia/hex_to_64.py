@@ -21,8 +21,6 @@ for idx in range(len(hex_num)):
 	
 	hex_list[idx] = hex_alg
 
-print(hex_list)
-
 tam_hex_num = len(hex_list)
 
 bin_list = [0] * tam_hex_num * 8
@@ -34,8 +32,6 @@ for idx in range(tam_hex_num):
 
 	except:
 		this_hex = int(hex_list[idx])
-
-	print(bin(this_hex))
 
 	this_bin = list(bin(this_hex))
 	this_bin.pop(0)
@@ -51,15 +47,32 @@ for idx in range(tam_hex_num):
 	for count in range(8):
 		bin_list[(idx * 8) +  count] = byte_list[idx][count]
 
-print(bin_list)
-
 qtd_bits = len(bin_list)
 
-if qtd_bits % 6 == 0:
-	print('caso 1')
+print(bin_list)
 
+# Caso quantidade de bits correta
+if qtd_bits % 6 == 0:
+	lista_64 = []
+
+	grupos_bits = int(qtd_bits / 6)
+
+	for count in range(grupos_bits):
+		idx = count * 6
+		num_list = bin_list[idx :idx + 6]
+
+		print(num_list)
+
+		num_string = "".join(str(x) for x in num_list)
+
+		number = int(num_string, 2)
+
+		print(number)		
+		
+# Caso sobre 4 bits
 elif qtd_bits % 6 == 4:
 	print('caso 2')
 
+# Caso sobre 2 bits
 else:
 	print('caso 3')
