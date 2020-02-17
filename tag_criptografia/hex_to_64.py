@@ -6,8 +6,6 @@ convert_list = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',\
 		'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7',\
 		'8', '9', '+', '-']
 
-print(convert_list[43])
-
 hex_num = input()
 
 hex_list = [0] * len(hex_num)
@@ -27,9 +25,10 @@ print(hex_list)
 
 tam_hex_num = len(hex_list)
 
-bin_list = [0] * tam_hex_num
+bin_list = [0] * tam_hex_num * 8
 
 for idx in range(tam_hex_num):
+	byte_list = [0] * 8
 	try:
 		this_hex = int(hex_list[idx], 16)
 
@@ -47,6 +46,20 @@ for idx in range(tam_hex_num):
 	for count in range(tam_bin):
 		this_bin.insert(0,'0')
 
-	bin_list[idx] = this_bin
+	byte_list[idx] = this_bin
+
+	for count in range(8):
+		bin_list[(idx * 8) +  count] = byte_list[idx][count]
 
 print(bin_list)
+
+qtd_bits = len(bin_list)
+
+if qtd_bits % 6 == 0:
+	print('caso 1')
+
+elif qtd_bits % 6 == 4:
+	print('caso 2')
+
+else:
+	print('caso 3')
