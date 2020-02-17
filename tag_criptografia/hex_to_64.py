@@ -51,10 +51,10 @@ qtd_bits = len(bin_list)
 
 print(bin_list)
 
+lista_64 = []
+
 # Caso quantidade de bits correta
 if qtd_bits % 6 == 0:
-	lista_64 = []
-
 	grupos_bits = int(qtd_bits / 6)
 
 	for count in range(grupos_bits):
@@ -67,8 +67,8 @@ if qtd_bits % 6 == 0:
 
 		number = int(num_string, 2)
 
-		print(number)		
-		
+		lista_64.append(convert_list[number])		
+
 # Caso sobre 4 bits
 elif qtd_bits % 6 == 4:
 	print('caso 2')
@@ -76,3 +76,7 @@ elif qtd_bits % 6 == 4:
 # Caso sobre 2 bits
 else:
 	print('caso 3')
+
+result = "".join(str(x) for x in lista_64)
+
+print(result)
