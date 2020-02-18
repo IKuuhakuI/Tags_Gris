@@ -51,12 +51,12 @@ Principais Headers:
 ----------------------------------------------------------------------------------------------------------------------
 
 8) Recon (ou reconnaissance) é a primeira fase de um pentest. Significa, literalmente, reconhecimento. É a parte na qual coletamos informações e fazemos um planejamento de como prosseguir com o ataque. É importante para que possamos entender a natureza do problema, além de que, quanto mais conhecimento tivermos do sistema que queremos invadir, a tarefa será mais simples.
-
+ 
 ----------------------------------------------------------------------------------------------------------------------
 
-9) a)
+9) a) CMD Injection é um ataque que consiste em injetar comandos de sistema como um parâmetro.
 
-b)
+b) 
 
 ----------------------------------------------------------------------------------------------------------------------
 
@@ -98,10 +98,10 @@ e)
 
 13) a) CSRF (Cross-Site Request Forgery) é um ataque que se aproveita da confiança do usuário na aplicação web. Por exemplo, ao marcar a opção de lembrar a senha, o navegador irá guardar o cookie da sessão. No exemplo de um banco, você está logado nele e, por meio de Engenharia Social, recebe um e-mail falsificado que abre um site forjado. Assim, ele pode forjar uma falsa transação bancária. Como ele possuí o cookie da sua sessão, ele pode enganar o site do banco, se passando por você, para fazer essa transação para a conta dele. 
 
-b)
+b) 
 
-c)
+c) SSRF (Server-Side Request Forgery) é uma vulnerabilidade na qual o invasor faz com um servidor realize requisições HTTP por ele.
 
-d)
+d) 
 
 e)
