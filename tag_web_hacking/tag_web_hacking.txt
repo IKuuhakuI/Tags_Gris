@@ -17,7 +17,7 @@ No método POST ele envia os dados no corpo da mensagem (diferente do GET que en
 
 5) 
 
-6)
+6) Cookies são dados seus que ficam salvos ao entrar em algum site. Por exemplo, ao fazer uma compra (sem estar logado) em algum site, o seu carrinho fica salvo enquanto você fica buscando outros produtos. O compartilhamento de informações é a falha de segurança mais notável nesse caso. Por exemplo: os cookies coletam muitas informações sobre os seus hábitos de navegação, suas informações pessoais e isso pode ser usado por empresas para começar a mostrar anúncios baseados nesses dados.
 
 7) OWASP top 10 é uma lista com os maiores riscos de segurança para aplicações web.
 
