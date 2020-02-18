@@ -104,4 +104,6 @@ c) SSRF (Server-Side Request Forgery) é uma vulnerabilidade na qual o invasor f
 
 d) 
 
-e)
+e) Formas de evitar CSRF:
+-Evitar utilizar a opção de lembrar a senha
+-Utilizar cookies de sessão (não são gravados em disco) 
