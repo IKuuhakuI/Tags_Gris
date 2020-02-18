@@ -47,12 +47,8 @@ def hex_to_64(hex_num):
 		
 		for count in range(4):
 			bin_list[(idx * 4) +  count] = byte_list[count]
-			print(bin_list)
-
 
 	qtd_bits = len(bin_list)
-
-	print(bin_list)
 
 	lista_64 = []
 
@@ -64,8 +60,6 @@ def hex_to_64(hex_num):
 			idx = count * 6
 			num_list = bin_list[idx :idx + 6]
 
-			print(num_list)
-
 			num_string = "".join(str(x) for x in num_list)
 
 			number = int(num_string, 2)
@@ -76,14 +70,10 @@ def hex_to_64(hex_num):
 	elif qtd_bits % 6 == 4:
 		grupos_bits = int(qtd_bits/6) + 1
 
-		print(grupos_bits)
-
 		for count in range(grupos_bits):
 			idx = count * 6
 			if(count != grupos_bits - 1):
 				num_list = bin_list[idx : idx + 6]
-
-				print(num_list)
 
 				num_string = "".join(str(x) for x in num_list)
 			
@@ -93,29 +83,43 @@ def hex_to_64(hex_num):
 
 			else:
 				num_list = bin_list[idx : idx + 4]
-
-				print(num_list)
+				
+				num_string = "".join(str(x) for x in num_list)
+				
+				number = int(num_string, 2)
+				
+				lista_64.append(convert_list[number])
+				lista_64.append("=")
+	# Caso sobre 2 bits
+	else:
+		grupos_bits = int(qtd_bits/6) + 1
+		
+		for count in range(grupos_bits):
+			idx = count * 6
+			
+			if(count != grupos_bits - 1):
+				num_list = bin_list[idx : idx + 6]
 
 				num_string = "".join(str(x) for x in num_list)
 
 				number = int(num_string, 2)
 
 				lista_64.append(convert_list[number])
-				lista_64.append("=")
 
-	# Caso sobre 2 bits
-	else:
-		print("caso 3")
+			else:
+				num_list = bin_list[idx:idx+2]
+				
+				num_string = "".join(str(x) for x in num_list)
+				
+				number = int(num_string, 2)
+				
+				lista_64.append(convert_list[number])
+				lista_64.append("==")
+	
 
 	# Gera a string do resultado
 	result = "".join(str(x) for x in lista_64)
 
 	print(result)
 
-################################################3
-
-def main():
-	entrada = input()
-	
-	hex_to_64(entrada)
-main()
+#################################################
