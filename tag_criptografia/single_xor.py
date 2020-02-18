@@ -1,6 +1,6 @@
 def single_byte_xor(entrada):
 	dic = {}
-	max_key = ["", 0]
+	max_list = ["", 0]
 
 	for count in range(len(entrada)):
 		try:
@@ -11,19 +11,32 @@ def single_byte_xor(entrada):
 
 		dic[entrada[count]] = qtd
 
-		if(max_key[0] == ""):
-			max_key[0] = entrada[count]
-			max_key[1] = qtd
+		if(max_list[0] == ""):
+			max_list[0] = entrada[count]
+			max_list[1] = qtd
 
-		elif(max_key[1] < qtd):
-			max_key[0] = entrada[count]
-			max_key[1] = qtd			
+		elif(max_list[1] < qtd):
+			max_list[0] = entrada[count]
+			max_list[1] = qtd			
 
 	print(dic)
+	print(max_list)
+	
+	try:
+		max_key = list(bin(int(max_list[0], 16)))
+	except:
+		max_key = list(bin(int(max_list[0])))	
+
+	max_key.pop(0)
+	max_key.pop(0)
+
+	for count in range(8 - len(max_key)):
+		max_key.insert(0,'0')
 
 	print(max_key)
-	
+
 	# e = 0x65
-	letra_e = ['1', '0', '0', '0', '0', '0', '1'] 
+	letra_e = ['0', '1', '0', '0', '0', '0', '0', '1'] 
+		
 
 single_byte_xor('1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736')
