@@ -120,6 +120,6 @@ def hex_to_64(hex_num):
 	# Gera a string do resultado
 	result = "".join(str(x) for x in lista_64)
 
-	print(result)
+	return result
 
 #################################################
