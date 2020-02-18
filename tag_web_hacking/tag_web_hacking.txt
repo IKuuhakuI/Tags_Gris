@@ -62,7 +62,7 @@ b)
 
 10) a) Essa tipo de ataque busca manipular o código SQL para acessar informações de um banco de dados.
 
-b) 
+b) O Union based attack busca se aproveitar do operador UNION do SQL. Basicamente ele combina o resultado de múltiplos SELECT em um único e, por fim, retorna isso numa resposta HTTP.
 
 c) Similar ao SQL injection, porém o Blind não recebe nenhum retorno do sistema (mensagens de erro por exemplo)
 
