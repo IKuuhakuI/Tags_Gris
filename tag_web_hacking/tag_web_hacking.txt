@@ -1,5 +1,7 @@
 1) HTTP é um protocolo de comunicação entre computadores que permite a transferència de dados entre diferentes redes. Ele segue um modelo Request/Response.
 
+----------------------------------------------------------------------------------------------------------------------
+
 2) Response Code indicam o status da sua requisição HTTP através de números. Podem ser classificadas em:
 Respostas de Informação (100-109)
 Respostas de Sucesso (200-299)
@@ -9,13 +11,22 @@ Erros do Servidor (500-599)
 
 Elas são usados para programas que utilizem protocolo HTTP, como por exemplo uma página da web.
 
+----------------------------------------------------------------------------------------------------------------------
+
 3) O header file é um arquivo no qual os programadores colocam informações sobre o programa/código feito. No caso de um HTTP header são usados para servir de compartilhamento de informações entre o servidor e o cliente. No caso da informação não estar corretamente criptografada, um user mal intencionado pode se aproveitar para realizar XSS injection.
 
+----------------------------------------------------------------------------------------------------------------------
+
 4) Métodos HTTP indicam a ação a ser executada. Como por exemplo: GET, POST, PUT, DELETE, além de outros. 
+
 No método GET utiliza o URL para enviar dados para o servidor.
+
 No método POST ele envia os dados no corpo da mensagem (diferente do GET que envia no HEADER). Por esse motivo, ele considerado mais seguro, visto que as informações não ficam tão visíveis quanto no GET.
 
+----------------------------------------------------------------------------------------------------------------------
+
 5) Cache é um depósito de informações (uma memória). Ele guarda dados de sites acessados com frequência, por exemplo, o que faz com que os dados possam ser carregados de forma mais rápida.
+
 Principais Headers:
 	Requisições:
 		-Cache-control: max-age
@@ -29,10 +40,64 @@ Principais Headers:
 		-Cache-control: public
 		-Cache-control: private
 
+----------------------------------------------------------------------------------------------------------------------
+
 6) Cookies são dados seus que ficam salvos ao entrar em algum site. Por exemplo, ao fazer uma compra (sem estar logado) em algum site, o seu carrinho fica salvo enquanto você fica buscando outros produtos. O compartilhamento de informações é a falha de segurança mais notável nesse caso. Por exemplo: os cookies coletam muitas informações sobre os seus hábitos de navegação, suas informações pessoais e isso pode ser usado por empresas para começar a mostrar anúncios baseados nesses dados.
+
+----------------------------------------------------------------------------------------------------------------------
 
 7) OWASP top 10 é uma lista com os maiores riscos de segurança para aplicações web.
 
+----------------------------------------------------------------------------------------------------------------------
+
 8) Recon (ou reconnaissance) é a primeira fase de um pentest. Significa, literalmente, reconhecimento. É a parte na qual coletamos informações e fazemos um planejamento de como prosseguir com o ataque. É importante para que possamos entender a natureza do problema, além de que, quanto mais conhecimento tivermos do sistema que queremos invadir, a tarefa será mais simples.
 
+----------------------------------------------------------------------------------------------------------------------
 
+9) a)
+
+b)
+
+----------------------------------------------------------------------------------------------------------------------
+
+10) a) Essa tipo de ataque busca manipular o código SQL para acessar informações de um banco de dados.
+
+b) 
+
+c) Similar ao SQL injection, porém o Blind não recebe nenhum retorno do sistema (mensagens de erro por exemplo)
+
+d)
+
+----------------------------------------------------------------------------------------------------------------------
+
+11) a)
+
+b)
+
+c)
+
+d)
+
+----------------------------------------------------------------------------------------------------------------------
+
+12) a)
+
+b)
+
+c)
+
+d)
+
+e)
+
+----------------------------------------------------------------------------------------------------------------------
+
+13) a)
+
+b)
+
+c)
+
+d)
+
+e)
