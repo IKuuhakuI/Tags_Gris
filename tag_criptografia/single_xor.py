@@ -75,9 +75,6 @@ def decifrar(entrada, current_letter):
 	entrada_hex_list = join_hex(entrada)
 	
 	tam_entrada_hex_list = len(entrada_hex_list)
-
-	print(entrada_hex_list)
-	input()
 		
 	for count in range(tam_entrada_hex_list):
 		try:
@@ -102,8 +99,6 @@ def decifrar(entrada, current_letter):
 
 	lista_resultado = []
 
-	print(byte_to_ascii(xor_byte_list))	
-
 	for count in range(tam_entrada_hex_list):
 		this_xor_byte = single_xor(entrada_hex_list[count], xor_byte_list, 8)
 
@@ -119,12 +114,33 @@ def decifrar(entrada, current_letter):
 ##################################
 
 def main():
-	letras_mais_usadas = [' ', 'e', 't', 'a', 'o', 'i', 'n', 's', 'h', 'r', 'd', 'l', 'c', 'u', 'm', 'w', 'f', 'g', 'y', 'p', 'b', 'v', 'k', 'j', 'x', 'q', 'z']
+	# Em ordem dos caracteres mais usados da lingua inglesa
+	caracteres_mais_usados = [' ', 'e', 't', 'a', 'o', 'i', 'n', 's', 'h',\
+			      'r', 'd', 'l', 'c', 'u', 'm', 'w', 'f', 'g',\
+			      'y', 'p', 'b', 'v', 'k', 'j', 'x', 'q', 'z']
 
-	for idx in range(len(letras_mais_usadas)):
-		print(letras_mais_usadas[idx])
-		letra = get_byte(ord(letras_mais_usadas[idx]))
-		print(decifrar('1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736', letra))
-		input()
+	resultado = "Não achei um resultado satisfatório"
 
+	for idx in range(len(caracteres_mais_usados)):
+		print("Caractere atual:", caracteres_mais_usados[idx])
+		print()
+
+		caractere = get_byte(ord(caracteres_mais_usados[idx]))
+		teste = decifrar('1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736', caractere)
+
+		print("Resultado testado:", teste)
+		print()
+		
+
+		is_ok = input("Caso resultado satisfatório, digite ok: ")
+
+		if is_ok == "ok":
+			resultado = teste
+			print()
+			break
+
+		print()
+		print("#######################################\n")
+
+	print("Resultado final:", resultado)
 main()
