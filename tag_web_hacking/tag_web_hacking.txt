@@ -33,4 +33,6 @@ Principais Headers:
 
 7) OWASP top 10 é uma lista com os maiores riscos de segurança para aplicações web.
 
+8) Recon (ou reconnaissance) é a primeira fase de um pentest. Significa, literalmente, reconhecimento. É a parte na qual coletamos informações e fazemos um planejamento de como prosseguir com o ataque. É importante para que possamos entender a natureza do problema, além de que, quanto mais conhecimento tivermos do sistema que queremos invadir, a tarefa será mais simples.
+
 
