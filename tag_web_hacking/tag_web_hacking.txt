@@ -70,9 +70,13 @@ d)
 
 ----------------------------------------------------------------------------------------------------------------------
 
-11) a)
+11) a) É uma vulnerabilidade do sistema que permite injeção de código através do cliente.
 
-b)
+b) Tipos de XSS:
+
+-Reflected: nesse caso, o ataque é feito através da própria requisição http.
+-Stored: utiliza a página acessada para executar ataque.
+-DOM: ocorre quando JavaScript recebe utiliza dados de fontes como a URL e utiliza em uma função que suporta execução dinâmica.
 
 c)
 
