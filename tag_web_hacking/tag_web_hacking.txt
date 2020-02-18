@@ -1,0 +1,24 @@
+1) HTTP é um protocolo de comunicação entre computadores que permite a transferència de dados entre diferentes redes. Ele segue um modelo Request/Response.
+
+2) Response Code indicam o status da sua requisição HTTP através de números. Podem ser classificadas em:
+Respostas de Informação (100-109)
+Respostas de Sucesso (200-299)
+Redirecionamentos (300-399)
+Erros do Cliente (400-499)
+Erros do Servidor (500-599)
+
+Elas são usados para programas que utilizem protocolo HTTP, como por exemplo uma página da web.
+
+3) O header file é um arquivo no qual os programadores colocam informações sobre o programa/código feito. No caso de um HTTP header são usados para servir de compartilhamento de informações entre o servidor e o cliente. No caso da informação não estar corretamente criptografada, um user mal intencionado pode se aproveitar para realizar XSS injection.
+
+4) Métodos HTTP indicam a ação a ser executada. Como por exemplo: GET, POST, PUT, DELETE, além de outros. 
+No método GET utiliza o URL para enviar dados para o servidor.
+No método POST ele envia os dados no corpo da mensagem (diferente do GET que envia no HEADER). Por esse motivo, ele considerado mais seguro, visto que as informações não ficam tão visíveis quanto no GET.
+
+5) 
+
+6)
+
+7) OWASP top 10 é uma lista com os maiores riscos de segurança para aplicações web.
+
+
