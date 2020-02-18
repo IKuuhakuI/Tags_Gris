@@ -86,11 +86,11 @@ d)
 
 12) a) LFI (Local File Inclusion) é a inclusão de arquivos através da exploração de processos de inclusão vulneráveis. Essa inclusão é de arquivos que já estão presentes localmente no servidor.
 
-b) RFI (Remote FIle Inclusion) é a inclusão de arquivos através da exploração de processos de inclusão vulneráveis. Essa falha ocorre quando é dado o path de um arquivo que vai ser incluido, porém ela não é validada de forma correta pela aplicação web. Assim, uma URL externa pode ser injetada na aplicação 
+b) RFI (Remote FIle Inclusion) é a inclusão de arquivos através da exploração de processos de inclusão vulneráveis. Essa falha ocorre quando é dado o path de um arquivo que vai ser incluido, porém ela não é validada de forma correta pela aplicação web. Assim, uma URL externa pode ser injetada na aplicação.
 
-c)
+c) O Path Traversal é um ataque que busca acessar arquivos e diretórios que estão fora do diretório root.
 
-d)
+d) Ao invadir diretórios além do root, pode-se incluir esses arquivos que já estão presentes no servidor. 
 
 e)
 
