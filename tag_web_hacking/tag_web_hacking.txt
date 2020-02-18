@@ -84,9 +84,9 @@ d)
 
 ----------------------------------------------------------------------------------------------------------------------
 
-12) a)
+12) a) LFI (Local File Inclusion) é a inclusão de arquivos através da exploração de processos de inclusão vulneráveis. Essa inclusão é de arquivos que já estão presentes localmente no servidor.
 
-b)
+b) RFI (Remote FIle Inclusion) é a inclusão de arquivos através da exploração de processos de inclusão vulneráveis. Essa falha ocorre quando é dado o path de um arquivo que vai ser incluido, porém ela não é validada de forma correta pela aplicação web. Assim, uma URL externa pode ser injetada na aplicação 
 
 c)
 
