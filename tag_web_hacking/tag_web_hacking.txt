@@ -78,7 +78,7 @@ b) Tipos de XSS:
 -Stored: utiliza a página acessada para executar ataque.
 -DOM: ocorre quando JavaScript recebe utiliza dados de fontes como a URL e utiliza em uma função que suporta execução dinâmica.
 
-c)
+c) Solução está na pasta POC
 
 d) Solução está na pasta POC
 
@@ -102,7 +102,7 @@ b) Solução está na pasta POC
 
 c) SSRF (Server-Side Request Forgery) é uma vulnerabilidade na qual o invasor faz com um servidor realize requisições HTTP por ele.
 
-d) 
+d) Solução está na pasta POC
 
 e) Formas de evitar CSRF:
 -Evitar utilizar a opção de lembrar a senha
