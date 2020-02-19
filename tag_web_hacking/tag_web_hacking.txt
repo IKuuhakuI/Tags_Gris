@@ -92,7 +92,7 @@ c) O Path Traversal é um ataque que busca acessar arquivos e diretórios que es
 
 d) Ao invadir diretórios além do root, pode-se incluir esses arquivos que já estão presentes no servidor. 
 
-e)
+e) Solução está na pasta POC
 
 ----------------------------------------------------------------------------------------------------------------------
 
