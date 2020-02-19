@@ -98,7 +98,7 @@ e)
 
 13) a) CSRF (Cross-Site Request Forgery) é um ataque que se aproveita da confiança do usuário na aplicação web. Por exemplo, ao marcar a opção de lembrar a senha, o navegador irá guardar o cookie da sessão. No exemplo de um banco, você está logado nele e, por meio de Engenharia Social, recebe um e-mail falsificado que abre um site forjado. Assim, ele pode forjar uma falsa transação bancária. Como ele possuí o cookie da sua sessão, ele pode enganar o site do banco, se passando por você, para fazer essa transação para a conta dele. 
 
-b) 
+b) Solução está na pasta POC
 
 c) SSRF (Server-Side Request Forgery) é uma vulnerabilidade na qual o invasor faz com um servidor realize requisições HTTP por ele.
 
