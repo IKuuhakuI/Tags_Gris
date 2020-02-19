@@ -1,4 +1,4 @@
-1) HTTP é um protocolo de comunicação entre computadores que permite a transferència de dados entre diferentes redes. Ele segue um modelo Request/Response.
+﻿1) HTTP é um protocolo de comunicação entre computadores que permite a transferència de dados entre diferentes redes. Ele segue um modelo Request/Response.
 
 ----------------------------------------------------------------------------------------------------------------------
 
@@ -56,7 +56,7 @@ Principais Headers:
 
 9) a) CMD Injection é um ataque que consiste em injetar comandos de sistema como um parâmetro.
 
-b) Solução está na pasta POC
+b) Solução está no PDF POC 
 
 ----------------------------------------------------------------------------------------------------------------------
 
@@ -66,7 +66,7 @@ b) O Union based attack busca se aproveitar do operador UNION do SQL. Basicament
 
 c) Similar ao SQL injection, porém o Blind não recebe nenhum retorno do sistema (mensagens de erro por exemplo)
 
-d) Solução está na pasta POC
+d) Solução está no PDF POC 
 
 ----------------------------------------------------------------------------------------------------------------------
 
@@ -78,9 +78,9 @@ b) Tipos de XSS:
 -Stored: utiliza a página acessada para executar ataque.
 -DOM: ocorre quando JavaScript recebe utiliza dados de fontes como a URL e utiliza em uma função que suporta execução dinâmica.
 
-c) Solução está na pasta POC
+c) Solução está no PDF POC 
 
-d) Solução está na pasta POC
+d) Solução está no PDF POC 
 
 ----------------------------------------------------------------------------------------------------------------------
 
@@ -92,17 +92,17 @@ c) O Path Traversal é um ataque que busca acessar arquivos e diretórios que es
 
 d) Ao invadir diretórios além do root, pode-se incluir esses arquivos que já estão presentes no servidor. 
 
-e) Solução está na pasta POC
+e) Solução está no PDF POC 
 
 ----------------------------------------------------------------------------------------------------------------------
 
 13) a) CSRF (Cross-Site Request Forgery) é um ataque que se aproveita da confiança do usuário na aplicação web. Por exemplo, ao marcar a opção de lembrar a senha, o navegador irá guardar o cookie da sessão. No exemplo de um banco, você está logado nele e, por meio de Engenharia Social, recebe um e-mail falsificado que abre um site forjado. Assim, ele pode forjar uma falsa transação bancária. Como ele possuí o cookie da sua sessão, ele pode enganar o site do banco, se passando por você, para fazer essa transação para a conta dele. 
 
-b) Solução está na pasta POC
+b) Solução está no PDF POC 
 
 c) SSRF (Server-Side Request Forgery) é uma vulnerabilidade na qual o invasor faz com um servidor realize requisições HTTP por ele.
 
-d) Solução está na pasta POC
+d) Solução está no PDF POC 
 
 e) Formas de evitar CSRF:
 -Evitar utilizar a opção de lembrar a senha
