@@ -1,0 +1,14 @@
+Primeiramente, importei o arquivo binário para o ghidra. Em seguida, comecei a análise.
+Ao terminar ela, comecei a ler a função main. Nela, alterei o tipo da função de undefined8 para int.
+O comando mkdir foi usado para fazer uma cópia da home e colocar essa cópia no diretório atual.
+A função printa ASCII art é só para mostrar a mensagem OWNADO.
+
+Ao observar a função system integrety check, achei as seguintes variáveis:
+-um unsigned int
+-um int
+-um arquivo
+
+O int é um valor aleatório gerado pela biblitoca random, vou chamar de rand_number.
+O unsigned int é o sucessor do módulo do valor aleatório por 5. Esse valor é escrito no arquivo chamado key.
+Chamarei o arquivo então de arq_key eo unsigned int de arq_key_content.
+Por fim, a função retorna o valor que foi escrito em key.
