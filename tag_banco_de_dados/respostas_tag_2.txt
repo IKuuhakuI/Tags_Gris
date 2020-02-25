@@ -1,0 +1,14 @@
+1) Qual foi o total de compras feitas nesse mercado?
+50.000
+
+2) Qual é o nome do primeiro comprador, em ordem alfabética, que tenha nascido após 1990?
+Abel
+
+3) Qual é o nome do comprador mais jovem?
+Heleno
+
+4) Qual produto que tem a melhor avaliação e o menor preço?
+CAMISA South Miami
+
+5) Qual é o vendedor que possui a melhor avaliação média e maior quantidade de vendas?
+Anibal
