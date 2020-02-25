@@ -1,0 +1,85 @@
+=>Tabela Candidatos: tabela para registrar os participantes do processo seletivo.
+	=> Dados da tabela:
+	-CPF: é único por pessoa, logo será a chave primária (optei por varchar por conter "-" e o ".")
+	-Nome: Talvez o mais importante de todos, por isso está NOT NULL.
+	-Curso e Período: um bom fator para medir a familiariedade com o conteúdo do GRIS.
+	-Contato 1 e 2: é importante ter pelo menos 1 forma de contato. O segundo é opcional.
+
+-------------------------------------
+
+=>Tabela Palestrantes: tabela para registrar aqueles que irão palestrar durante a semana do treinamento.
+	=> Dados da tabela:
+	-CPF: é único por pessoa, logo será a chave primária (optei por varchar por conter "-" e o ".")
+	-Nome: Talvez o mais importante de todos, por isso está NOT NULL.
+	-Formação: é bom ter uma informação para demonstrar o grau de conhecimento de palestrante.
+	-Instituição: Caso o palestrante não seja membro do GRIS e seja algum convidado afiliado a alguma instituição.
+	-Contato 1 e 2: é importante ter pelo menos 1 forma de contato. O segundo é opcional.
+
+-------------------------------------
+
+=> Tabela Palestras: tabela para registrar todas as palestras que ocorreram durante o treinamento.
+	=> Dados da tabela:
+	-ID da Palestra: Para diferenciar palestras com o mesmo tema.
+	-Assunto: Sobre o que a palestra se trata.
+	-Data: Registro de quando a palestra ocorreu.
+	-CPF do Palestrante: Chave estrangeira para servir de elo de ligação entre o palestrante e a palestra.
+
+-------------------------------------
+
+=> Tabela Tags: tabela para registrar todas as tag que foram passadas.
+	=> Dados da tabela:
+	-ID da tag: Para diferenciar tags que tenham sido passadas na mesma palestra.
+	-Id da palestra: Chave estrangeira para servir de elo de ligação entre a tag e a palestra na qual ela foi passada.
+	-Data de entrega: O prazo para entregar a tag (DATETIME para poder especificar até mesmo o horário)
+	-Descrição: Uma breve descrição do que deve ser feito.
+
+-------------------------------------
+
+
+=> Tabela Boletim: tabela que registra a nota dos candidatos em cada tag.
+	=> Dados da tabela:
+	-Id do boletim: serve para identificar um candidato em uma tag especifica.
+	-CPF do candidato: Chave estrangeira para relacionar o candidato com sua nota em alguma tag.
+	- Id da Tag: Chave estrangeira para relacionar a nota nessa tag a algum candidato.
+	-Nota: Nota adquirida pelo aluno na tag sendo registrada.
+	-Atraso: Anotação que indica se o aluno entregou a tag no prazo estipulado (S para caso esteja atrasado).
+
+-------------------------------------
+
+=> Tabela Ouvintes: tabela para registrar pessoas que compareceram aos treinamentos, porém não são candidatos.
+	=> Dados da tabela:
+	-Id do ouvinte: um mesmo ouvinte pode vir a diferentes palestras, logo, não podemos usar CPF como chave primária.
+	-Nome: Importante registrar quem foi ouvinte.
+	-CPF do Ouvinte: Em caso de mal uso do conhecimento, ter alguma identificação do ouvinte (além do nome) é importante.
+	-Id da palestra: palestra na qual o ouvinte compareceu (chave estrangeira).
+
+-------------------------------------
+
+=> Tabela Presença: tabela para registrar a presença dos candidatos em cada palestra.
+	=> ID da presença: serve para controle
+	=> ID da palestra: Chave estrangeira para identificar a 
+palestra que está sendo registrada.
+	=>Presente: S caso esteja presente ou N caso não esteja.
+	=> CPF do Candidato: Chave estrangeira para identificar o candidato que está sendo registrado.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

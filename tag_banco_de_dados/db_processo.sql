@@ -1,10 +1,8 @@
-create database db_processo;
-use db_processo;
-
 CREATE TABLE candidatos(
 	CPF_candidato VARCHAR(14) PRIMARY KEY NOT NULL,
 	nome VARCHAR(30) NOT NULL,
-	curso VARCHAR(40) NOT NULL,
+	curso VARCHAR(40),
+	período int,
 	contato_1 VARCHAR(40) NOT NULL,
 	contato_2 VARCHAR(40)	
 );
@@ -12,7 +10,7 @@ CREATE TABLE candidatos(
 CREATE TABLE palestrantes(
 	CPF_palestrante VARCHAR(14) PRIMARY KEY NOT NULL,
 	nome VARCHAR(30) NOT NULL,
-	formacao VARCHAR(40) NOT NULL,
+	formacao VARCHAR(40),
 	instituicao VARCHAR(40),
 	contato_1 VARCHAR(40) NOT NULL,
 	contato_2 VARCHAR(40)
