@@ -26,6 +26,7 @@ def hex_to_64(hex_num):
 	bin_list = [0] * tam_hex_num * 4
 
 	for idx in range(tam_hex_num):
+		# O byte do algarismo atual
 		byte_list = [0]
 
 		try:
@@ -35,6 +36,8 @@ def hex_to_64(hex_num):
 			this_hex = int(hex_list[idx])
 
 		this_bin = list(bin(this_hex))
+		
+		# Retirar o 0b que aparece no inicio da lista
 		this_bin.pop(0)
 		this_bin.pop(0)
 
@@ -123,3 +126,12 @@ def hex_to_64(hex_num):
 	return result
 
 #################################################
+
+def main():
+	entrada = input()
+
+	resultado = hex_to_64(entrada)
+
+	print(resultado)
+
+main()
