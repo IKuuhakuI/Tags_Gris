@@ -1,0 +1,20 @@
+Primeiramente, importei o arquivo binário para o ghidra. Em seguida, comecei a análise.
+Ao terminar ela, comecei a ler a função main. Nela, alterei o tipo da função de undefined8 para int.
+O comando mkdir foi usado para fazer uma cópia da home e colocar essa cópia no diretório atual.
+A função printa ASCII art é só para mostrar a mensagem OWNADO.
+
+Ao observar a função system integrety check, achei as seguintes variáveis:
+-um unsigned int
+-um int
+-um arquivo
+
+O int é um valor aleatório gerado pela biblitoca random, vou chamar de rand_number.
+O unsigned int é o sucessor do módulo do valor aleatório por 5. Esse valor é escrito no arquivo chamado key.
+Chamarei o arquivo então de arq_key eo unsigned int de arq_key_content.
+Por fim, a função retorna o valor que foi escrito em key.
+(O arquivo key ficou salvo na pasta tmp, portante ele é um arquivo temporário)
+
+Agora analisando a system loader callback, encontrei 2 variáveis do tipo long e uma do tipo char. Além disso, ela recebe como parâmetros o arq_key_content e um tipo que o ghidra não conseguiu definir. Entretanto, baseado na chamada da main, percebi que se tratava de uma string contendo um link. 
+Logo no início, percebi a função download file from url. Ela recebe o link que foi passado como parâmetro da função system loader callback. Para facilitar, irei chamar a variável de download_link. Além de pedir o download_link como parâmetro, ela pede o nome do arquivo. 
+A variável do tipo char é um comando do sistema que irá alterar as permissões do arquivo .encriptador .encriptador para permitir que o usuário possa executá-lo. Chamarei de system_cmd.
+

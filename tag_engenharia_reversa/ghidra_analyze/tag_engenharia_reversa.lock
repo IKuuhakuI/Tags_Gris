@@ -1,0 +1,9 @@
+#Ghidra Lock File
+#Wed Mar 04 20:59:10 BRT 2020
+OS\ Name=Linux
+OS\ Version=5.3.0-40-generic
+Username=luiz
+Hostname=luiz-ubuntu
+<META>\ Supports\ File\ Channel\ Locking=Channel Lock
+OS\ Architecture=amd64
+Timestamp=3/4/20, 8\:59 PM
