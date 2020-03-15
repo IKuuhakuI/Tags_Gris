@@ -1,0 +1,188 @@
+Nome: Luiz Carlos Aguiar C.
+Tag: Bandit - Over the Wire
+
+Level 0:
+Para passar desse level foi simples:
+Primeiro fiz a conexão utilizando o comando ssh. (A flag -p foi para especificar a porta.)
+-> ssh bandit0@bandit.labs.overthewire.org -p 2220
+
+Após logar, encontrei um arquivo texto chamado readme com a senha pro level 1:
+->Senha para o level 1: boJ9jbbUNNfktd78OOpsqOltutMc3MY1
+_________________________________________________________________________________
+
+Level 1:
+-> ssh bandit1@bandit.labs.overthewire.org -p 2220
+
+Nesse nível, preciso ler o arquivo "-" para acessar a senha do level 2.
+Para usar o cat em arquivo com o nome "-" usei esse formato:
+-> cat ./-
+
+Assim obtive a senha:
+-> Senha para o level 2: CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
+_________________________________________________________________________________________
+
+Level 2:
+-> ssh bandit2@bandit.labs.overthewire.org -p 2220
+
+Esse nível também foi bem simples. A senha está num arquivo chamado spaces in this filename.
+Para conseguir acessar o conteúdo dele, fiz:
+
+-> cat spaces\ in\ this\ filename
+
+E obtive a seguinte senha:
+-> Senha para o level 3: UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
+_________________________________________________________________________________________
+
+Level 3:
+-> ssh bandit3@bandit.labs.overthewire.org -p 2220
+
+Dessa vez, a senha está em um arquivo oculto dentro da pasta inhere.
+Para achar o arquivo, utilzei os comandos:
+-> cd inhere
+-> ls -lah
+
+(ls -a serve para exibir todos os arquivos, incluindo os ocultos.) 
+Assim, encontrei o arquivo .hidden e utilizer o cat para pegar o conteúdo dele.
+-> cat .hidden
+
+Obtendo assim, a senha.
+-> Senha para o level 4: pIwrPrtPN36QITSp3EQaw936yaFoFgAB
+_________________________________________________________________________________________
+
+Level 4:
+-> ssh bandit4@bandit.labs.overthewire.org -p 2220
+
+A senha está guardada no arquivo legível para um humano.
+Para descobrir qual é esse arquivo, utilizei o comando file:
+-> file ./*
+
+Assim, listei o tipo de todos os arquivos e vi que o -file07 é o único ASCII text.
+-> cat ./file07
+
+Obtive a seguinte senha:
+-> Senha para o level 5: koReBOKuIDDepwhWk7jZC0RTdopnAYKh
+_________________________________________________________________________________________
+
+Level 5:
+-> ssh bandit5@bandit.labs.overthewire.org -p 2220
+
+Dessa vez, o arquivo com a senha possui as seguintes propriedades:
+-Legível para humanos
+-Tamanho 1033 bytes
+-Não executável
+
+Primeiro, eu procurei por um arquivo com exatamente 1033 bytes.
+-> find -size 1033c
+(O sufixo c serve para procurar em bytes.)
+
+O resultado foi um único arquivo chamado .file2 dentro da pasta maybehere07.
+Utilizei:
+-> file ./maybehere07/.file2
+
+E verifiquei que ele era ASCII text. Por fim, fiz:
+-> ls -l ./maybehere07
+
+E verifiquei que ele não era executável.
+
+Assim, obtive a seguinte senha:
+-> Senha para o level 6: DXjZPULLxYr17uwoI01bNLQbtFemEgo7
+_________________________________________________________________________________________
+
+Level 6:
+-> ssh bandit6@bandit.labs.overthewire.org -p 2220
+
+O arquivo, dessa vez, possui as seguintes características:
+-Dono: user bandit7
+-Dono: grupo bandit6
+-33 bytes
+
+Solução similar a anterior:
+-> find / -user bandit7 -group bandit6 -size 33c -type f
+
+Encontrei a o arquivo: /var/lib/dpkg/info/bandit7.password
+Senha:
+-> Senha para o level 7: HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
+_________________________________________________________________________________________
+
+Level 7:
+-> ssh bandit7@bandit.labs.overthewire.org -p 2220
+
+Esse nível também é bem simples.
+O objetivo é achar a senha, sabendo que ela está ao lado da palavra: millionth.
+-> cat data.txt | grep 'millionth'
+
+Assim, achamos a seguinte senha:
+-> Senha para o level 8: cvX2JJa4CFALtqS87jk27qwqGhBM9plV
+_________________________________________________________________________________________
+
+Level 8:
+-> ssh bandit8@bandit.labs.overthewire.org -p 2220
+
+Esse nível também foi simples.
+Ele quer achar a senha, sabendo que é a única string que não se repete no arquivo.
+Para achar, utilizei o sort junto do uniq.
+-> sort data.txt | uniq -u
+
+Retornando a senha:
+
+-> Senha para o level 9: UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
+_________________________________________________________________________________________
+
+Level 9:
+-> ssh bandit9@bandit.labs.overthewire.org -p 2220
+
+Não tem muito mistério nessa também. Preciso achar algo legível que comece com muitos "=".
+Para isso, vou utilizar strings e grep.
+-> strings data.txt | grep '^='
+
+Achando a senha:
+-> Senha para o level 10: truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
+_________________________________________________________________________________________
+
+Level 10:
+-> ssh bandit10@bandit.labs.overthewire.org -p 2220
+
+De novo, direto ao ponto.
+Ele disse que o arquivo está encriptado em base 64. Então irei usar o comando base64:
+-> base64 -d data.txt
+
+(-d é uma flag que indica que estou decodifcando)
+
+Mensagem decodificada: The password is IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
+-> Senha para o level 11: IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
+_________________________________________________________________________________________
+
+Level 11:
+-> ssh bandit11@bandit.labs.overthewire.org -p 2220
+
+Um pouco mais difícil que os outros, mas depois de ler o man tr, entendi como fazer.
+Foi dito que todos os chars foram rotacionados em 13. Ou seja, um cifra de césar.
+Para decodificar, utilizer o seguinte comando:
+-> cat data.txt | tr '[A-Z]' '[N-ZA-M]' | tr '[a-z]' '[n-za-m]'
+
+(tr '[A-Z]' '[N-ZA-M]' significa que vou rotacionar em 13.)
+(O segundo tr foi para fazer a mesma coisa para as minúsculas)
+
+Mensagem decodificada: The password is 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
+-> Senha para o level12: 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
+_________________________________________________________________________________________
+
+Level 12: 
+-> ssh bandit12@bandit.labs.overthewire.org -p 2220
+
+Para achar o arquivo correto, tive que extrair várias vezes diferentes tipos de arquivos:
+Primeiro criei uma pasta em /tmp para poder trabalhar.
+
+Depois eu desfiz o hexdump que tinha sido feito e comecei a descompactar:
+-> xxd -r data.txt > resul.txt
+-> file resul.txt (gzip)
+-> mv resul.txt resul.gz
+-> ...
+-> file data8 (ASCII text)
+-> cat data8
+
+Resultado do processo: The password is 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
+-> Senha para o level 13: 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
+_________________________________________________________________________________________
+
+A partir daqui a dificuldade aumentou. Então irei parar por enquanto no nível 12.
